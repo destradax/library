@@ -78,3 +78,29 @@ employees = ["Fitzgerald Rasmussen",
 employees.each do |employee|
   Employee.create(name: employee, location: "main")
 end
+
+Category.delete_all
+categories = ["Ingenieria de software",
+  "Mercadeo",
+  "Infraestructura",
+  "Diseño grafico",
+  "Lenguajes y plataformas",
+  "Contabilidad",
+  "Administración de la Configuración",
+  "Bases de datos",
+  "Estandares y Modelos",
+  "Recursos humanos",
+  "Seguridad de Información",
+  "Desarrollo",
+  "Negociación",
+  "Estimaciones",
+  "Cloud Computing",
+  "Calidad",
+  "Aplicaciones Web",
+  "Metodología Agil",
+  "Leyes",
+  "Lenguaje de modelado"]
+
+categories.each do |category|
+  Category.create(name: category)
+end
