@@ -136,3 +136,38 @@ books.each do |book|
 	(rand(3)+1).times { b.categories.push(Category.find(category_ids.sample)) }
 	(rand(3)+1).times { b.authors.push(Author.find(author_ids.sample)) }
 end
+
+User.delete_all
+users = ["Fitzgerald Rasmussen",
+	"Rajah Parker",
+	"Deacon Hansen",
+	"Jeremy Wall",
+	"Maxwell Macdonald",
+	"Gabriel Howard",
+	"Dillon Shannon",
+	"Dominic Dodson",
+	"Adrian Hooper",
+	"Lance Hewitt",
+	"Hayes King",
+	"Xanthus Whitney",
+	"Raphael Peterson",
+	"Noah Dennis",
+	"Guy Lara",
+	"Caesar Joyner",
+	"George Noble",
+	"Oleg Clements",
+	"Chase Fitzpatrick",
+	"Kelly Puckett",
+	"Gage Best",
+	"Len Valenzuela",
+	"Zachary Myers",
+	"Dale Roberts",
+	"Silas Romero",
+	"Garrett Colon",
+	"Raphael Morrison",
+	"Asher Gilliam",
+	"Abraham Copeland"]
+
+users.each do |user|
+	User.create(name: user, location: "main")
+end
