@@ -163,9 +163,11 @@ books = [
 	{code: "DE421", name: "NORMAS BÁSICAS PARA LA CONTRATACIÓN", status: "available"}
 ]
 
+author_ids = Author.pluck(:id)
 category_ids = Category.pluck(:id)
 
 books.each do |book|
 	b = Book.create(code: book[:code], name: book[:name].capitalize, status: book[:status])
-	rand(4).times { b.categories.push(Category.find(category_ids.sample)) }
+	(rand(3)+1).times { b.categories.push(Category.find(category_ids.sample)) }
+	(rand(3)+1).times { b.authors.push(Author.find(author_ids.sample)) }
 end

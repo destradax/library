@@ -15,6 +15,13 @@
   <%= @book.status %>
 </p>
 
+<h2>Authors</h2>
+<ul>
+  <% @book.authors.each do |author| %>
+    <li><%= author.name %></li>
+  <% end %>
+</ul>
+
 <h2>Categories</h2>
 <ul>
   <% @book.categories.each do |category| %>
