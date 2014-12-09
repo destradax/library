@@ -43,11 +43,4 @@ ActiveRecord::Schema.define(version: 20141209134926) do
     t.datetime "updated_at"
   end
 
-  create_table "employees", force: true do |t|
-    t.string   "name"
-    t.string   "location"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end

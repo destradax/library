@@ -44,41 +44,6 @@ authors.each do |author|
 	Author.create(name: author)
 end
 
-Employee.delete_all
-employees = ["Fitzgerald Rasmussen",
-	"Rajah Parker",
-	"Deacon Hansen",
-	"Jeremy Wall",
-	"Maxwell Macdonald",
-	"Gabriel Howard",
-	"Dillon Shannon",
-	"Dominic Dodson",
-	"Adrian Hooper",
-	"Lance Hewitt",
-	"Hayes King",
-	"Xanthus Whitney",
-	"Raphael Peterson",
-	"Noah Dennis",
-	"Guy Lara",
-	"Caesar Joyner",
-	"George Noble",
-	"Oleg Clements",
-	"Chase Fitzpatrick",
-	"Kelly Puckett",
-	"Gage Best",
-	"Len Valenzuela",
-	"Zachary Myers",
-	"Dale Roberts",
-	"Silas Romero",
-	"Garrett Colon",
-	"Raphael Morrison",
-	"Asher Gilliam",
-	"Abraham Copeland"]
-
-employees.each do |employee|
-	Employee.create(name: employee, location: "main")
-end
-
 Category.delete_all
 categories = ["Ingenieria de software",
 	"Mercadeo",
