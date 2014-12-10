@@ -7,12 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="menu">
-  <%= link_to "Authors", :authors %>
-  <%= link_to "Books", :books %>
-  <%= link_to "Categories", :categories %>
-  <%= link_to "Users", :users %>
-</div>
+  <header>
+    <% if current_user %>
+      Hello <%= current_user.name %>!
+    <% else %>
+      <%= link_to "Login", :login %>
+    <% end %>
+  </header>
+  <div id="menu">
+    <%= link_to "Authors", :authors %>
+    <%= link_to "Books", :books %>
+    <%= link_to "Categories", :categories %>
+    <%= link_to "Users", :users %>
+  </div>
 <%= yield %>
 </body>
 </html>
